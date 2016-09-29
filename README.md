@@ -6,7 +6,7 @@
 
 ####step1：虚拟机
 安装unbuntu虚拟机
-<img src="ES2016_14353042/Res/Pic/1.png ">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/1.png">
 如图安装好虚拟机
 >本人计算机使用WIN10系统，使用VMP12版本,ubuntu是16.0.4，64位的版本
 
@@ -25,9 +25,9 @@
 如果openjdk-7jdk不能安装，很可能就是源的问题
 
 那么结果大概就会如下图：
-<img src="ES2016_14353042/Res/Pic/2.png">
-<img src="ES2016_14353042/Res/Pic/3.png">
-<img src="ES2016_14353042/Res/Pic/4.png">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/2.png">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/3.png">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/4.png">
 >图中就是没有成功安装openjdk-7-jdk,换源之后就搞定了
 
 ####step3：解压&编译
@@ -44,12 +44,12 @@
 ```
    tar -zxvf systemc-2.3.1.tgz
 ```
-<img src="ES2016_14353042/Res/Pic/5.png">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/5.png">
 解压后进入systemc-2.3.1的目录下
 ```
    cd systemc-2.3.1
 ```
-<img src="ES2016_14353042/Res/Pic/6.png">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/6.png">
 新建一个临时文件夹objdir
 ```
    mkdir objdir
@@ -66,7 +66,7 @@
 ```
    sudo make install
 ```
-<img src="ES2016_14353042/Res/Pic/7.png">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/7.png">
 编译完后文件目录如下()，能看到include, lib-linux64(对于32位系统，这里是lib-linux
 ```
  cd ..       
@@ -75,7 +75,7 @@
 ```
    pwd
 ```
-<img src="ES2016_14353042/Res/Pic/8.png">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/8.png">
 
 ####step4：编译DOL
 进入刚刚dol的文件夹
@@ -104,7 +104,7 @@
    ant -f runexample.xml -Dnumber=1
 ```
 成功结果如图
-<img src="ES2016_14353042/Res/Pic/9.png">
+<img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/9.png">
 
 ####lab1实验感想
 对于这次实验，是最基础的配置实验，那么其实难度并不大，主要的问题是在遇到问题怎么去解决。其实在遇到那个jdk不能安装的时候，去群里咨询了下，发现换源能够解决，那么就要自己去百度怎么样才能换源，达到比较好的下载速度，然后就自己根据网上的教程一通配置，发现执行指令就可以了。所以遇到问题还是需要多讨论，然后就可以比较快地完成实验。
