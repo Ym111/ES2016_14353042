@@ -4,7 +4,9 @@
 
 ####step1：代码修改
 根据example给出的图例
+
 <img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/3-5.png">
+
 那么可以看出整个的结构主要有3部分，生产者、中间者、消费者这三个基本的块，那么查看src的文件夹发现.c .h文件，就是这一个实验的重点，其中每一部分就是对应的框架。
 
 其中每一个.c文件内，都有一个init函数和fire函数，其中Init函数只是运行一次，然后fire函数类似于LOOP，能够在程序中不断得执行，直到结束。
@@ -30,8 +32,11 @@
   </iterator>
 ```
 这里是更改了迭代次数，同时布局的时候。迭代2次，那么就可以完成任务1，因为变成i^4，所以就可以了。这里也是DOL的一个很大的特性，把功能的定义和连接的定义分开去定义，这样把每一个模块定义好，设定好功能，在通过.xml文件进行调用，实例化、设置彼此的关系。这就是DOL的编译特点。通过更改了迭代次数，那么获得如下的结果。
+
 <img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/3-2.png">
+
 对应的example2的dot为
+
 <img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/3-7.png">
 那么这个获得的结果正确之后，完成任务2就可以更加简单，主要的更改在于，模块的设置，因为模块里面是平方的操作，那么我们只要改为i^3就可以，调用的模块因为.xml只调用1次，所以直接更改即可
 ```
@@ -55,9 +60,13 @@ int square_fire(DOLProcess *p) {
 
 ```
 那么就可以获得如下结果：
+
 <img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/3-1.png">
+
 那么example1的dot图为
+
 <img src="https://github.com/Ym111/ES2016_14353042/blob/master/Res/Pic/3-6.png">
+
 ####step2: 遇到的问题
 这一次实验中遇到的最大问题是，更改了square.c之后，却不能获得效果。所以查看build文件夹内的main/可以看到，example1是锁定状态，证明不能进行修改，所以我们要做的是把对应的文件夹删除（我是这么进行处理的）所以提高权限，使用
 ```
